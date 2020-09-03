@@ -6,7 +6,7 @@ import ru.alexxx.user.model.UserColecion;
 
 import java.io.IOException;
 
-class JsonUserDeserializaerTest {
+class JsonUsersDBListDeserializaerTest {
 
     @Test
     void deserializaer() throws IOException, ClassNotFoundException {

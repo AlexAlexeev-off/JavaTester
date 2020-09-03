@@ -1,5 +1,6 @@
 package ru.alexxx.user.serializers;
 
+import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.alexxx.user.model.User;
@@ -8,7 +9,7 @@ import ru.alexxx.user.model.UserColecion;
 import java.io.File;
 import java.util.ArrayList;
 
-class BinUserSerializaerTest {
+class BinUsersDBListSerializaerTest {
 
     @Test
     void serialize() {
@@ -30,6 +31,13 @@ class BinUserSerializaerTest {
         XmlUserSerializaer xmlUserSerializaer = new XmlUserSerializaer();
         xmlUserSerializaer.serialize(userColecion, "user.xml");
         Assertions.assertTrue(new File("user.xml").exists());
+    }
+    @Test
+    void csvSerializeTest() {
+        UserColecion userColecion = prepareTestData();
+        CsvUserSerializaer csvUserSerializaer = new CsvUserSerializaer();
+        csvUserSerializaer.serialize(userColecion, "user.csv");
+        Assertions.assertTrue(new File("user.csv").exists());
     }
 
     private UserColecion prepareTestData() {

@@ -8,15 +8,17 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class XmlUserDeserializaerTest {
+class UsersDBListDeserializaerTest {
 
     @Test
     void deserializaer() throws IOException, ClassNotFoundException {
-        XmlUserDeserializaer xmlUserDeserializaer = new XmlUserDeserializaer();
-        UserColecion users = xmlUserDeserializaer.deserializaer("C:\\Users\\user\\IdeaProjects\\JavaTester\\user.xml");
+        UserDeserializaer userDeserializaer = new UserDeserializaer();
+        UserColecion users = userDeserializaer.deserializaer("C:\\Users\\user\\IdeaProjects\\JavaTester\\user.txt");
 
         Assertions.assertTrue(users.getUsers().size() == 10);
         Assertions.assertEquals("Alex", users.getUsers().iterator().next().getName());
+
+
 
     }
 }

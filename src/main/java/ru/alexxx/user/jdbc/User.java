@@ -1,34 +1,36 @@
-package ru.alexxx.user.model;
+package ru.alexxx.user.jdbc;
 
-import java.io.Serializable;
+public class User {
 
-public class User implements Serializable {
-    private int id;
+    private Long id;
     private String name;
     private String email;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public Long setId(Long id) {
         this.id = id;
+        return id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public String setName(String name) {
         this.name = name;
+        return name;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public String setEmail(String email) {
         this.email = email;
+        return email;
     }
 
     @Override
