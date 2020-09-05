@@ -13,7 +13,7 @@ public class UsersAddDB{
         List<User> users = new ArrayList<>();
         Connection connection = null;
         Statement statement = null;
-        PreparedStatement pstatement = null;
+        PreparedStatement pstatement;
         ResultSet resultSet = null;
 
         try {
@@ -21,6 +21,7 @@ public class UsersAddDB{
             connection = dataSource.getConnection();
             statement = connection.createStatement();
             statement.execute("INSERT INTO users (name, email) VALUES ('Tom', 'tom@mail.ru')");
+            statement.execute("INSERT INTO users (name, email) VALUES ('Fred', 'fred@mail.ru')");
 //            for (int i = 0; i < 10; i++) {
 //                statement.addBatch("INSERT INTO users (name, email) VALUES ('Bob', 'bob@mail.ru')");
 //            }
