@@ -1,13 +1,14 @@
-package ru.alexxx.words;
+package ru.alexxx.biblio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WordsApplication {
+public class BiblioApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WordsApplication.class, args);
+		SpringApplication.run(BiblioApplication.class, args);
 	}
+
 
 }
